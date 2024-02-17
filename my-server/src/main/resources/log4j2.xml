@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration>
+    <properties>
+        <property name="pattern">%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] %thread [%logger] - %m%n</property>
+    </properties>
+
+    <Appenders>
+        <Console name="consoleAppender" target="SYSTEM_OUT">
+            <PatternLayout charset="UTF-8" pattern="${pattern}"/>
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <Root level="trace">
+            <AppenderRef ref="consoleAppender"/>
+        </Root>
+    </Loggers>
+
+</Configuration>
